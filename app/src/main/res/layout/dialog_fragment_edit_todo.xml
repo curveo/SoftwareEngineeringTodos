@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:id="@+id/title_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title_textview"
+            style="@style/label_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="@string/create_title_text" />
+
+        <EditText
+            android:id="@+id/title_edit_textview"
+            style="@style/edittext_text"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="3"
+            android:background="@drawable/edittext_background"
+            android:contentDescription="@string/create_title_descrip"
+            android:focusable="true"
+            android:gravity="center|start"
+            android:inputType="textAutoComplete"
+            android:lines="1"
+            android:padding="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notes_text_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notes_textview"
+            style="@style/label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/create_notes_text" />
+
+        <EditText
+            android:id="@+id/notes_edit_textview"
+            style="@style/edittext_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:contentDescription="@string/create_notes_descrip"
+            android:focusable="true"
+            android:gravity="start"
+            android:lines="12"
+            android:padding="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notes_text_layout">
+
+        <Button
+            android:id="@+id/save_button"
+            style="@style/edit_form_button"
+            android:contentDescription="@string/save_button_descrip"
+            android:text="@string/save_button_text" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="@style/edit_form_button"
+            android:contentDescription="@string/cancel_button_descrip"
+            android:text="@string/cancel_button_text" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttons_layout"
+        android:background="@color/colorAccent"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@string/delete_button_descript"
+        android:focusable="true"
+        android:text="@string/delete_button_text" />
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Software Engineering TODOs</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- SyncAdapter related -->
+    <string name="sync_account_type">capstone.udacity.todos.account</string>
+    <string name="content_authority">capstone.udacity.todos.softwareengineeringtodos</string>
+    <string name="title_activity_new_todo">New Todo</string>
+    <string name="no_data">No Todos yet.\nTap "+" button to get started</string>
+
+    <string name="button_save">SAVE</string>
+    <string name="button_cancel">CANCEL</string>
+    <string name="title_todoitem_list">TodoItems</string>
+    <string name="title_todoitem_detail">TodoItem Detail</string>
+    <string name="title_activity_nav_drawer_test">NavDrawerTest</string>
+
+    <string name="about_descrip">Software Engineering TODOs is a way to track tasks and save notes
+        when working on various projects.</string>
+
+    <string name="uuid_about">UUID: %s</string>
+    <string name="two_pane_default">Select or add a TODO</string>
+    <string name="create_title_text">Title</string>
+    <string name="create_notes_text">Notes</string>
+    <string name="save_button_text">SAVE</string>
+    <string name="cancel_button_text">CANCEL</string>
+    <string name="delete_button_text">DELETE</string>
+    <string name="edit_button_text">EDIT</string>
+    <string name="create_title_hint">EX: Review javascript</string>
+    <string name="create_notes_hint">EX: Complete triage.</string>
+    <string name="alert_confirm_title">Are you sure?</string>
+    <string name="alert_confirm_positive">YES</string>
+    <string name="error_server_delete_todo">Error deleting todo from server, please try again.</string>
+    <string name="detail_fragment_title">Todo Item #</string>
+
+    <!-- Nav Drawer -->
+    <string name="drawer_header_title">Software Engineering TODO\'s</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- App Widget -->
+    <string name="widget_header_title">Pending TODOS</string>
+    <string name="widget_no_data">No Todos Yet.\nTap to get started!</string>
+
+    <!-- AdMobs -->
+    <string name="banner_ad_unit_id_test">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6656018780904776/3693642444</string>
+
+    <!-- Content Descriptions -->
+    <string name="fab_descrip">Add New TODO</string>
+    <string name="about_icon_image_descrip">About Dialog App Icon</string>
+    <string name="about_text_descrip">About Text</string>
+    <string name="uuid_textview_descrip">UUID Text</string>
+    <string name="noresults_descrip">No Results Text</string>
+    <string name="create_title_descrip">Create Title</string>
+    <string name="create_notes_descrip">Create Notes</string>
+    <string name="save_button_descrip">Save </string>
+    <string name="cancel_button_descrip">Cancel </string>
+    <string name="delete_button_descript">Delete </string>
+    <string name="checkbox_descrip">Done </string>
+    <string name="title_text_descrip">Title </string>
+    <string name="notes_descrip">Notes </string>
+    <string name="about_drawer_descrip">App Description</string>
+    <string name="select_item_descrip">Select or add </string>
+    <string name="widget_pending_descrip">Widget Pending Todos </string>
+    <string name="edit_button_descrip">Edit </string>
+    <string name="ad_descrip">Banner Ad</string>
+
+</resources>

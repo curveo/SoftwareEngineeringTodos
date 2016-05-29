@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "687416943203",
+    "project_id": "software-engineering-todos"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687416943203:android:910cde403a1219af",
+        "android_client_info": {
+          "package_name": "capstone.udacity.todos.softwareengineeringtodos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgXvTvMv_F-r0N3zkgsGNJ_AHsTaq4D1Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-78472710-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

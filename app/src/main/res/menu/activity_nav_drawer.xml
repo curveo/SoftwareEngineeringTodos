@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- TODO: add strings to strings -->
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/clear_local_db"
+            android:title="Clear Local DataBase" />
+        <item android:id="@+id/clear_server_db"
+            android:title="Clear Server DataBase" />
+        <item android:id="@+id/clear_all_data"
+            android:title="Clear Local and Remote Data" />
+        <item android:id="@+id/sync_server_data"
+            android:title="Sync Now" />
+        </group>
+
+    <item android:title="Info">
+        <menu>
+            <item android:id="@+id/about_item"
+                android:title="About SETodos" />
+        </menu>
+    </item>
+
+</menu>

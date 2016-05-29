@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:layout_weight="2">
+
+        <LinearLayout
+            android:id="@+id/title_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title_textview"
+                style="@style/label_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/create_title_descrip"
+                android:text="@string/create_title_text" />
+
+            <EditText
+                android:id="@+id/title_edit_textview"
+                style="@style/edittext_text"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="3"
+                android:background="@drawable/edittext_background"
+                android:focusable="true"
+                android:gravity="center|start"
+                android:hint="@string/create_title_hint"
+                android:lines="1"
+                android:padding="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/notes_textview"
+            style="@style/label_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/title_text_layout"
+            android:layout_marginTop="25dp"
+            android:contentDescription="@string/create_notes_descrip"
+            android:text="@string/create_notes_text" />
+
+        <EditText
+            android:id="@+id/notes_edit_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/notes_textview"
+            android:background="@drawable/edittext_background"
+            android:ems="10"
+            android:focusable="true"
+            android:gravity="start"
+            android:hint="@string/create_notes_hint"
+            android:inputType="textMultiLine"
+            android:lines="17"
+            android:padding="5dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_save"
+                style="@style/label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:contentDescription="@string/save_button_descrip"
+                android:focusable="true"
+                android:text="@string/button_save" />
+
+            <Button
+                android:id="@+id/button_cancel"
+                style="@style/label_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"
+                android:contentDescription="@string/cancel_button_descrip"
+                android:focusable="true"
+                android:text="@string/button_cancel" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

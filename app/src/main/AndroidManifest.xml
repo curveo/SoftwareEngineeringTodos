@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="capstone.udacity.todos.softwareengineeringtodos">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <meta-data android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name=".TODOSApplication">
+        <activity
+            android:name=".TodosActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ContentProvider to store feed data. -->
+        <provider
+            android:name=".data.provider.TodosProvider"
+            android:authorities="capstone.udacity.todos.softwareengineeringtodos"
+            android:exported="false" />
+
+        <!-- SyncAdapter's authentication service -->
+        <service android:name=".sync.TodoAuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <!-- The SyncAdapter service -->
+        <service
+            android:name=".sync.TodoSyncService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+
+        <activity
+            android:name=".NewTodoActivity"
+            android:label="@string/title_activity_new_todo"
+            android:parentActivityName=".TodosActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="capstone.udacity.todos.softwareengineeringtodos.TodosActivity" />
+        </activity>
+        <activity
+            android:name=".TodoItemDetailActivity"
+            android:label="@string/title_todoitem_detail"
+            android:parentActivityName=".TodosActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="capstone.udacity.todos.softwareengineeringtodos.TodosActivity" />
+        </activity>
+
+
+        <!-- Widget for TodoList-->
+        <service
+            android:name=".widgets.TodoRemoteViewsService"
+            android:enabled="@bool/widget_list_enabled"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <receiver android:name=".widgets.TodoListWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="capstone.udacity.todos.softwareengineeringtodos.ACTION_DATA_UPDATED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/todo_app_widget_info" />
+        </receiver>
+    </application>
+
+</manifest>

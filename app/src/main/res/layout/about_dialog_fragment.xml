@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_background"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/icon_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:background="@mipmap/ic_launcher"
+        android:contentDescription="@string/about_icon_image_descrip" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/icon_image"
+        android:background="@color/colorPrimaryDark" />
+
+
+    <TextView
+        android:id="@+id/about_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon_image"
+        android:padding="15dp"
+        android:text="@string/about_descrip"
+        android:textSize="20sp" />
+
+    <View
+        android:id="@+id/seperator_about_text"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/about_text"
+        android:background="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/about_uuid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seperator_about_text"
+        android:layout_marginTop="15dp" />
+
+</RelativeLayout>

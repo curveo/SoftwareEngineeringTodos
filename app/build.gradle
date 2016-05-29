@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "capstone.udacity.todos.softwareengineeringtodos"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        // Default Host URL
+        buildConfigField "String", "SERVER_HOST", "\"www.curveo.net:8081\"";
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.google.gms.google-services'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+
+    // Butterknife for view bindings.
+    compile 'com.jakewharton:butterknife:8.0.1'
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+
+    // Analytics
+    compile 'com.google.android.gms:play-services-analytics:9.0.0'
+
+    // AdMob
+    compile 'com.google.firebase:firebase-ads:9.0.0'
+}
